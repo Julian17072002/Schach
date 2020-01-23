@@ -1,18 +1,15 @@
 
 public abstract class Spielfiguren {
-
-	enum figurenSchwarz {koenig, dame, laeufer, springer, turm, bauer} 
-	enum figurenWeiﬂ {koenig, dame, laeufer, springer, turm, bauer}
 	
-	private boolean farbeWeiss;
+	private boolean weiﬂ;
 	private boolean bewegen;
 	
 	public boolean getFarbeWeiss() {
-		return farbeWeiss;
+		return weiﬂ;
 	}
 
-	public void setFarbeWeiss(boolean farbeWeiss) {
-		this.farbeWeiss = farbeWeiss;
+	public void setFarbeWeiss(boolean weiﬂ) {
+		this.weiﬂ = weiﬂ;
 	}
 	
 	public boolean getBewegen() {
@@ -26,5 +23,4 @@ public abstract class Spielfiguren {
 	public static void main(String[] args) {
 		
 	}
-	
 }
