@@ -6,16 +6,6 @@ public class Schach {
 	    Farbe w = Farbe.weiﬂ;
 	    Farbe s = Farbe.schwarz;
 
-	    
-	    public Schach(String[][] feld) {
-	        this(feld, true);
-	    }
-
-		public Schach(String[][] feld, boolean werAmZug) {
-	        Schach.feld = feld;
-	        this.werAmZug = werAmZug;
-	    }
-
 	    public String[][] getfeld() {
 	        return feld;
 	    }
