@@ -1,23 +1,28 @@
 
 public abstract class Spielfiguren {
 	
-	private boolean weiﬂ;
-	private boolean bewegen;
-	
-	public boolean getFarbeWeiss() {
-		return weiﬂ;
+	private Figur figur;
+	private Farbe farbe;
+
+	Spielfiguren (Farbe farbe, Figur figur) {
+		this.setFarbe(farbe);
+		this.setFigur(figur);
 	}
 
-	public void setFarbeWeiss(boolean weiﬂ) {
-		this.weiﬂ = weiﬂ;
+	public Figur getFigur() {
+		return figur;
 	}
-	
-	public boolean getBewegen() {
-		return bewegen;
+
+	public void setFigur(Figur figur) {
+		this.figur = figur;
 	}
-	
-	public void setBewegen(boolean bewegen) {
-		this.bewegen = bewegen;
+
+	public Farbe getFarbe() {
+		return farbe;
+	}
+
+	public void setFarbe(Farbe farbe) {
+		this.farbe = farbe;
 	}
 	
 	public static void main(String[] args) {
