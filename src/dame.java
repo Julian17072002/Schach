@@ -1,13 +1,8 @@
 
-class dame extends Spielfiguren{
+class Dame extends Spielfiguren{
 
-	dame(Farbe farbe, Figur figur) {
+	Dame(Farbe farbe, Figur figur) {
 		super(farbe, figur);
-	}
-
-	public static void main(String[] args) {
-		
-
 	}
 
 }

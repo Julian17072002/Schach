@@ -3,9 +3,7 @@ public class Schach {
 
 	 	private static String[][] feld = new String[8][8];
 	    private boolean werAmZug;
-	    Spielfiguren[][] br;
-	    Farbe w = Farbe.weiﬂ;
-	    Farbe s = Farbe.schwarz;
+	    public Spielfiguren[][] br;
 
 	    public Schach(int x) {
 	    	br = new Spielfiguren[x][x];

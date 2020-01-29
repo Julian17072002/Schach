@@ -1,12 +1,8 @@
 
-class bauer extends Spielfiguren{
+class Bauer extends Spielfiguren{
 
-	bauer(Farbe farbe, Figur figur) {
+	Bauer(Farbe farbe, Figur figur) {
 		super(farbe, figur);
-	}
-
-	public static void main(String[] args) {
-		
 	}
 
 }
