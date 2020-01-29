@@ -25,6 +25,10 @@ public abstract class Spielfiguren {
 		this.farbe = farbe;
 	}
 	
+	public void ausgabe() {
+		
+	}
+	
 	public static void main(String[] args) {
 		
 	}

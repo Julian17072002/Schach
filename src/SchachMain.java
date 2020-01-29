@@ -1,6 +1,8 @@
 
 public class SchachMain {
 	
+	final static int Brettlaenge = 8;
+	
 	public static void main(String[] args) {
 		Figur König = Figur.koenig;
 		Figur Dame = Figur.dame;
@@ -47,8 +49,27 @@ public class SchachMain {
 		koenig koenig2 = new koenig(s, König);
 		
 		
+		Schach x = new Schach(Brettlaenge);
 		
 		
+		x.befuellen(koenig1, 0, 5);
+		koenig1.ausgabe();
+		x.befuellen(dame1, 0, 4);
+		dame1.ausgabe();
+		x.befuellen(laeufer1, 0, 3);
+		laeufer1.ausgabe();
+		x.befuellen(laeufer2, 0, 6);
+		laeufer2.ausgabe();
+		
+		
+		x.befuellen(koenig2, 7, 4);
+		koenig2.ausgabe();
+		x.befuellen(dame2, 7, 5);
+		dame2.ausgabe();
+		x.befuellen(laeufer3, 7, 3);
+		laeufer3.ausgabe();
+		x.befuellen(laeufer4, 7, 6);
+		laeufer4.ausgabe();
 		
 	}
 
