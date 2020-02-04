@@ -1,60 +1,54 @@
 
-public class Schach {
+public class Schach {	
+	
 
-	 	private static String[][] feld = new String[8][8];
-	    private boolean werAmZug;
-	    public Spielfiguren[][] br;
+	    Spielfiguren[][] brett;
 
 	    public Schach(int x) {
-	    	br = new Spielfiguren[x][x];
+	    	brett = new Spielfiguren[x][x];
 		}
-
-		public String[][] getfeld() {
-	        return feld;
-	    }
-
-	    public void setFeld(String[][] feld) {
-	        Schach.feld = feld;
-	    }
-
-	    public boolean getWerAmZug() {
-	        return werAmZug;
-	    }
-
-	    public void setWerAmZug(boolean werAmZug) {
-	        this.werAmZug = werAmZug;
-	    }
 	    
-		@SuppressWarnings("unused")
-		private boolean figurErkennung(int x, int y) {
-			if (feld[x][y] == null) {
+	    public  boolean pruefen(int i, int j) {
+			if (brett[i][j] == null) {
 				return false;	
 			}
 			else {
 				return true;	
 			}
 		}
-	    
-		public void befuellen(Spielfiguren a, int i, int j) {
-			
-		}
-		
-	    public static void brettAusgabe() {
-	    	System.out.println(" ");
-	    	System.out.println(" __  __  __  __  __  __  __  __ ");
-			for (int i = 0; i < feld.length;i++)
-			{
-				for (int j = 0; j < feld[0].length;j++)
-				{
-					System.out.print("|__|");
+	
+	    public void befuellen(Spielfiguren f, int x, int y) {
+			try {
+				if (pruefen(x, y)) {
+					System.out.println("Auf dem Feld ["+x+"] ["+y+"] liegt schon eine Speilfigur!\n");
 				}
-				System.out.println("");
+				else {
+					brett[x][y] = f;
+				}
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("Dieses Feld existiert nicht!\n");
+				return;
 			}
 		}
 	    
-	    public static void main(String[] args) {
-	    	brettAusgabe();
-
-	    }
-
+	    public void brettAusgabe() {
+//			System.out.println();
+//			System.out.print("   ");
+//			for (int i = 0; i < brett.length; i++) {
+//				System.out.print(i+" ");
+//			}
+//			System.out.println("");
+	
+			for (int i = 0; i < brett.length; i++) {
+				System.out.print(i+" |");
+				for (int j = 0; j < brett.length; j++) {
+					try {
+						System.out.print(brett[j][i].figur + "|");
+					} catch (NullPointerException e) {
+						System.out.print(" |");
+					}
+				}
+				System.out.println();
+			}
+		}
 }

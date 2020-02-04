@@ -1,5 +1,5 @@
 
-class Bauer extends Spielfiguren{
+public class Bauer extends Spielfiguren{
 
 	Bauer(Farbe farbe, Figur figur) {
 		super(farbe, figur);
