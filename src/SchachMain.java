@@ -119,8 +119,14 @@ public class SchachMain {
 		
 		schachbrett.befuellen(bauer16, 7, 6);
 		
+		System.out.println("  ");
 		
 		schachbrett.brettAusgabe();
+	
+		System.out.println("  ");
+		System.out.println("Figuren am Brett: "+schachbrett.gesamtFiguren());
+		System.out.println("davon weiss: "+schachbrett.gesamtFiguren(w));
+		System.out.println("davon schwarz: "+schachbrett.gesamtFiguren(s));
 	}
 
 }

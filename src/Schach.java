@@ -3,7 +3,9 @@ public class Schach {
 	
 
 	    Spielfiguren[][] brett;
-
+	    Farbe w = Farbe.weiﬂ;
+		Farbe s = Farbe.schwarz;
+	    
 	    public Schach(int x) {
 	    	brett = new Spielfiguren[x][x];
 		}
@@ -29,6 +31,22 @@ public class Schach {
 				System.out.println("Dieses Feld existiert nicht!\n");
 				return;
 			}
+		}
+	    
+	    public int gesamtFiguren() {
+			int anzahlFiguren = gesamtFiguren(s) + gesamtFiguren(w);
+			return anzahlFiguren;
+		}
+		public int gesamtFiguren(Farbe f) {
+			int anz = 0;
+			for(int i=0;i<brett.length; i++) {
+				for (int j=0;j<brett.length;j++) {
+					if(brett[i][j] != null && brett[i][j].farbe == f) {
+						anz++;
+					}
+				}
+			}
+			return anz;
 		}
 	    
 	    public void brettAusgabe() {
