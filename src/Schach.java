@@ -3,8 +3,8 @@ public class Schach {
 	
 
 	    Spielfiguren[][] brett;
-	    Farbe w = Farbe.weiﬂ;
-		Farbe s = Farbe.schwarz;
+	    Farbe w = Farbe.WEISS;
+		Farbe s = Farbe.SCHWARZ;
 	    
 	    public Schach(int x) {
 	    	brett = new Spielfiguren[x][x];
@@ -34,9 +34,9 @@ public class Schach {
 		}
 	    
 	    public int gesamtFiguren() {
-			int anzahlFiguren = gesamtFiguren(s) + gesamtFiguren(w);
-			return anzahlFiguren;
+	    	return gesamtFiguren(s) + gesamtFiguren(w);
 		}
+	    
 		public int gesamtFiguren(Farbe f) {
 			int anz = 0;
 			for(int i=0;i<brett.length; i++) {
@@ -50,12 +50,7 @@ public class Schach {
 		}
 	    
 	    public void brettAusgabe() {
-//			System.out.println();
-//			System.out.print("   ");
-//			for (int i = 0; i < brett.length; i++) {
-//				System.out.print(i+" ");
-//			}
-//			System.out.println("");
+
 	
 			for (int i = 0; i < brett.length; i++) {
 				System.out.print(i+" |");

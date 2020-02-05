@@ -12,8 +12,8 @@ public class SchachMain {
 		Figur Turm = Figur.turm;
 		Figur Bauer = Figur.bauer;
 		
-		Farbe w = Farbe.weiﬂ;
-		Farbe s = Farbe.schwarz;
+		Farbe w = Farbe.WEISS;
+		Farbe s = Farbe.SCHWARZ;
 		
 		
 		Schach schachbrett = new Schach(Brettlaenge);
